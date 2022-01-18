@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="./app.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>CPEN322 Project</title>
+</head>
+
+<body>
+  <h1>Inventory Tracker</h1>
+  <hr>
+  <h2>Get all items in the Inventory</h2>
+  <button id="getAll" type="button">Get all items</button>
+  <hr>
+  <h2>Update item in the Inventory</h2>
+  <div>
+    <div class = "label">
+      <label for="updateId">Id: (Required)</label>
+      <input type="text" id="updateId" name="updateId" required>
+    </div>
+    <div class = "label">
+      <label for="updateId">Name:</label>
+      <input type="text" id="updateName" name="updateName" required>
+    </div>
+    <div class = "label"> 
+      <label for="updateId">Cost:</label>
+      <input type="text" id="updateCost" name="updateCost" required>
+    </div>
+    <div class = "label">
+      <label for="updateId">Quantity:</label>
+      <input type="text" id="updateQuantity" name="updateQuantity" required>
+    </div>
+    <div class = "label">
+      <label for="updateId">Country:</label>
+      <input type="text" id="updateCountry" name="updateCountry" required>
+    </div>
+    <div class = "label">
+      <label for="updateId">Creation Time:</label>
+      <input type="text" id="updateCreationTime" name="updateCreationTime" required>
+    </div>
+    <div class = "label">
+      <label for="updateId">Tags: (Comma separated)</label>
+      <input type="text" id="updateTags" name="updateTags" required>
+    </div>
+  </div>
+  <button id="updateItem" type="button">Update item</button>
+  <hr>
+  <h2>Create item in the Inventory</h2>
+  <div>
+    <div class = "label">
+      <label for="createId">Id:</label>
+      <input type="text" id="createId" name="createId" required>
+    </div>
+    <div class = "label">
+      <label for="createId">Name:</label>
+      <input type="text" id="createName" name="createName" required>
+    </div>
+    <div class = "label"> 
+      <label for="createId">Cost:</label>
+      <input type="text" id="createCost" name="createCost" required>
+    </div>
+    <div class = "label">
+      <label for="createId">Quantity:</label>
+      <input type="text" id="createQuantity" name="createQuantity" required>
+    </div>
+    <div class = "label">
+      <label for="createId">Country:</label>
+      <input type="text" id="createCountry" name="createCountry" required>
+    </div>
+    <div class = "label">
+      <label for="createId">Tags: (Comma separated)</label>
+      <input type="text" id="createTags" name="createTags" required>
+    </div>
+  </div>
+  <button id="createItem" type="button">Create item</button>
+  <hr>
+  <h2>Delete item in the Inventory</h2>
+  <div>
+    <div class = "label">
+      <label for="deleteId">Id: (Required)</label>
+      <input type="text" id="deleteId" name="deleteId" required>
+    </div>
+  </div>
+  <button id="deleteItem" type="button">Delete item</button>
+  <hr>
+  <h2>Get item in Inventory (Filtered)</h2>
+  <div>
+    <div class = "label">
+      <label for="getFilterAttribute">Attribute: </label>
+      <input type="text" id="getFilterAttribute" name="getFilterAttribute" required>
+    </div>
+    <div class = "label">
+      <label for="getFilterComparator">Comparator (Must be "<",">","=", or ""): </label>
+      <input type="text" id="getFilterComparator" name="getFilterComparator" required>
+    </div>
+    <div class = "label">
+      <label for="getFilterValue">Value: </label>
+      <input type="text" id="getFilterValue" name="getFilterValue" required>
+    </div>
+  </div>
+  <button id="getFilterItem" type="button">Get filtered item</button>
+  <hr>
+  <div>
+    <h3 id="answer">Result:</h2>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+conn = new Mongo();
+db = conn.getDB("Inventory");
+db.dropDatabase();
+imgHost = '/';
+
+result = db.items.insert([
+	{
+		_id: 'item1',
+		name: 'Rubik\'\s Cube',
+	    cost: 15,
+		quantity: 100,
+        country: 'Hungary',
+		creationTime: 1642300000000,
+		updateTime: 1642300000000,
+		tags: ["Toy", "Game", "Kids"]
+	},
+	{
+		_id: 'item2',
+		name: 'Water Bottle',
+	    cost: 25,
+		quantity: 200,
+        country: 'Canada',
+		creationTime: 1642300000000,
+		updateTime: 1642300000000,
+		tags: ["Lifestyle", "Kids"]
+	},
+	{
+		_id: 'item3',
+		name: 'Computer',
+	    cost: 500,
+		quantity: 10,
+        country: 'USA',
+		creationTime: 1642300000000,
+		updateTime: 1642300000000,
+		tags: ["Lifestyle", "Game", "Electronics"]
+	}
+]);
+
+
+print(result);
