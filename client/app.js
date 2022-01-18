@@ -75,7 +75,6 @@ function main(){
 
 
 function convertJSONtoHTML(JSON){
-    console.log(JSON)
     let header = Object.getOwnPropertyNames(JSON[0])
     let table = document.createElement("table")
     let tr = table.insertRow(-1);

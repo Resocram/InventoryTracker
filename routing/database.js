@@ -39,7 +39,6 @@ Database.prototype.getItems = function(){
 
 Database.prototype.getItemFiltered = function(filter){
 	let datatype = typeof filter.value
-	console.log(filter)
 	if(datatype === 'number'){
 		return this.connected.then(db =>
 			new Promise((resolve,reject) =>{

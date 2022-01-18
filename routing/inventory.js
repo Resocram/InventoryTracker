@@ -97,7 +97,7 @@ router.put("/:id", async function(req, res){
             name: req.body.name,
             cost: req.body.cost,
             quantity: req.body.quantity,
-            country: req.body.quantity,
+            country: req.body.country,
             creationTime: req.body.creationTime,
             tags: req.body.tags
         }
