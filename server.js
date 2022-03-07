@@ -4,7 +4,6 @@ const inventoryRoute = require('./routing/inventory')
 const host = "localhost"
 const port = 3000
 
-//const db = new Database("mongodb://localhost:27017", "shopify-inventory");
 const clientApp = path.join(__dirname, 'client');
 let app = express()
 app.use(express.json()) 						// to parse application/json
@@ -14,6 +13,3 @@ app.use("/inventory",inventoryRoute);
 app.listen(port, () => {
 	console.log(`${new Date()}  App Started. Listening on ${host}:${port}, serving ${clientApp}`);
 });
-
-// InventoryItem
-// id. name,Cost, Country_of_origin,

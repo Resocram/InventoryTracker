@@ -71,7 +71,7 @@ router.get("/filter", async function(req, res){
 // })
 
 router.post("/", async function(req, res){
-    let id = req.body.id == null ? Math.random().toString() : req.body.id;
+    let id = req.body.id == "" ? Math.random().toString() : req.body.id;
     let newItem = {
         _id: id,
         name: req.body.name,
@@ -95,10 +95,10 @@ router.put("/:id", async function(req, res){
     if(req.params.id){
         let newItem = {
             name: req.body.name,
-            cost: req.body.cost,
-            quantity: req.body.quantity,
+            cost: Number(req.body.cost),
+            quantity: Number(req.body.quantity),
             country: req.body.country,
-            creationTime: req.body.creationTime,
+            creationTime: Number(req.body.creationTime),
             tags: req.body.tags
         }
         // Remove attributes that are blank

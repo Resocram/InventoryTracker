@@ -115,8 +115,7 @@ Database.prototype.getItem = function(id){
 Database.prototype.createItem = function(item){
 	return this.connected.then(db => 
 		new Promise((resolve, reject) => {
-			// My design implementation strictly enforces every item to have a name.
-			// If no ID is included, mongoDB will automatically generate one
+			// My design implementation strictly enforces every item to have a name along with an id.
 			if(item.name){
 				db.collection("items").insertOne(item, function(err, res){
 					if(err) reject(err);
@@ -132,6 +131,7 @@ Database.prototype.createItem = function(item){
 Database.prototype.updateItem = function(id, item){
 	return this.connected.then(db => 
 		new Promise((resolve, reject) => {
+			// Upsert is set to false as I do not want it to create an item if it does not exist
 			let cursor = db.collection("items").updateOne({_id:id}, {$set: item}, {upsert: false})
 			resolve(cursor)
 		})
